@@ -17,3 +17,7 @@
   font-size: 16px;
   margin-bottom: 4px;
 }
+.sidebarChat__info > h2:hover {
+  font-weight: 900;
+  font-size: 18px;
+}
