@@ -1,5 +1,7 @@
 .chat {
   flex: 0.65;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat__header {
@@ -27,4 +29,41 @@
   display: flex;
   justify-content: space-between;
   min-width: 100px;
+}
+
+.chat__body {
+  flex: 1;
+  background: url("https://dedmoroz-na-dom.ru/images/phone/iphone-fon.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  padding: 30px;
+  overflow: scroll;
+}
+
+.chat__receiver {
+  margin-left: auto;
+  background-color: #dcf8c6;
+}
+
+.chat__message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  width: fit-content;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.chat__name {
+  position: absolute;
+  font-size: x-small;
+  top: -15px;
+  font-weight: 900;
+}
+
+.chat__timestamp {
+  margin-left: 10px;
+  font-size: xx-small;
+  color: gray;
 }
