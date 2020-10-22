@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { Avatar, IconButton } from "@material-ui/core";
 import "./Chat.css";
 import {
@@ -8,10 +9,23 @@ import {
   InsertEmoticon,
   Mic,
 } from "@material-ui/icons";
+import { useParams } from "react-router-dom";
+import db from "./firebase";
 
-function Chat() {
+function Chat(props) {
   const [input, setInput] = useState("");
   const [seed, setSeed] = useState("");
+  const { roomId } = useParams(); //roomId has to match whatever we have given in Route path
+  const [roomName, setRoomName] = useState("");
+
+  useEffect(() => {
+    if (roomId) {
+      db.collection("rooms")
+        .doc(roomId)
+        .onSnapshot((snapshot) => setRoomName(snapshot.data().name));
+    }
+  }, [roomId]); //roomId is dependency here, everytime roomId changes this code runs
+
   useEffect(() => {
     //run this code whenever a component loads
     setSeed(Math.floor(Math.random() * 5000));
@@ -28,7 +42,7 @@ function Chat() {
           src={"https://avatars.dicebear.com/api/human/" + seed + ".svg"}
         ></Avatar>
         <div className="chat__headerInfo">
-          <h2>Room name</h2>
+          <h2>{roomName}</h2>
           <p>Last seen at...</p>
         </div>
         <div className="chat__headerRight">
