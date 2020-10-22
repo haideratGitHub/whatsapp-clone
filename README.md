@@ -25,7 +25,8 @@ This is WhatsApp web clone build with react js. The core functionalities of this
 
 ## Hosted Preview
 
-You can check out hosted preview of app [https://whatsapp-clone-1a42e.web.app/](here)
+You can check out hosted preview of app https://whatsapp-clone-1a42e.web.app/
+
 
 ## Running locally
 
