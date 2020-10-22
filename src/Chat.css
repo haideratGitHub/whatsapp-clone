@@ -43,6 +43,12 @@
 .chat__receiver {
   margin-left: auto;
   background-color: #dcf8c6;
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-bottom: 20px;
 }
 
 .chat__message {
