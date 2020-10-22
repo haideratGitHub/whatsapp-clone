@@ -41,7 +41,7 @@ function Chat() {
   useEffect(() => {
     //run this code whenever a component loads
     setSeed(Math.floor(Math.random() * 5000));
-  }, []);
+  }, [roomId]);
 
   const sendMessage = (e) => {
     e.preventDefault();
