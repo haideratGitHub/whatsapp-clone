@@ -30,7 +30,7 @@ You can check out hosted preview of app https://whatsapp-clone-1a42e.web.app/
 
 ## Running locally
 
-`$ git clone https://github.com/robin025/whatsapp-clone-react.git` <br/>
+`$ git clone https://github.com/haideratGitHub/whatsapp-clone.git` <br/>
 `$ cd whatsapp-clone` <br/>
 `$ npm install && npm start` <br/>
 
